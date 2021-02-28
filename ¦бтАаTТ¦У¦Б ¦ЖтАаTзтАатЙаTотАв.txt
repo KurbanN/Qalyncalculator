@@ -1,0 +1,134 @@
+UPDATED: GIRLS DECIDE THE PRICE FOR THE GROOM AND BOYS DECIDE THE PRICE FOR THE BRIDE!
+
+1. Bride's/Groom's name (input type=text)
+
+2. Starting bid (input type=number)
+
+3. Bride's/Groom's education (input type = dropdown list)
+
+   3.1. Undergraduate degree (coefficient 1.5)
+
+   3.2. College degree (coefficient 1.2)
+
+   3.3. High school degree (coefficient 1.05)
+
+   3.4. Middle school degree (coefficient 0.9)
+
+4. Bride's/Groom's family net worth (input type = dropdown list)
+
+   4.1. More than 100,000$ (coefficient 2)
+
+   4.2. Between 50,000$ and 100,000$ (coefficient 1.5)
+
+   4.3. Less than 50,000$ (coefficient 1.2)
+
+5. Bride's/Groom's skills (input type = checkbox)
+
+   5.1. Playing on dombra (+100$)
+
+   5.2. Good cook (+200$)
+
+   5.3. Easygoing character (+150$)
+
+   5.4. Sings well (+100$)
+
+6. Bride's/Groom's age (input type = radio)
+
+   6.1. Between 18-23 (coefficient 1.5)
+
+   6.2. Between 24-27 (coefficient 1.2)
+
+   6.3. 28+ (coefficient 0.95)
+
+7. Bride's/Groom's reputation (input type = checkbox)
+
+   7.1. Gossips about his/her parent's attitude (coefficient 0.85)
+
+   7.2. Gossips about his/her character (coefficient 0.9)
+
+   7.3. General gossips around his/her person (-200$)
+
+8. Love letter (<textarea> tags, maxlength = 500) 
+
+The final price should be based on the chosen answers and displayed on the same page!
+
+Explanation of each point
+
+Save all elements you need. For example, education = document.getElementById("education") or skills = document.getElementsByClassName("skills")
+
+Create a function `calculate` by using arrows (ES6 arrow function). Inside your function, you should:
+
+(1) Declare a variable `name` with "let". You will need it later when you will create a JS object
+
+(2) Declare a variable `price` with "let". The value you must get from the input `starting bid`. Don't forget to turn it into a number. By default, it's a string!
+
+Your calculator must work only if name is not empty AND price is not empty (use conditions with logical operators here)
+
+(3) Each option of your dropdown list for education should contain an attribute "value". It must be equal to the coefficient. For example:
+
+<select id="education">
+<option value="1.5">Undergraduate degree</option>
+
+</select>
+
+You can use the following selector --> education.value. It will return the coefficient that you can then multiply with your starting bid! Don't forget to turn it into a number. By default, it's a string!
+
+(4) Same as (3)
+
+(5) Try to use array.reduce here. I will share an example.
+
+(6) Try to use array.forEach here. I will share an example.
+
+(7) Try to use for loop here. I will share an example
+
+(8) Create a text space to express your love
+
+Save everything as an object with 3 properties (name, price, and love letter). For example
+
+let person = {
+
+bride_name: name,
+
+bride_price: price,
+
+letter_to_bride: love_letter
+
+}
+
+Add Event Listener to your button (don't use onClick in html)
+
+Your calculator must display the bride's/groom's name, his/her price, and your love letter on the same page as your calculator. Use template strings here (`Your price for ${bride_name} is etc.). You should put the object properties inside of your template string!
+
+
+
+Your JavaScript code must include at least 1 of the following things
+
+1. array.forEach method
+
+2. array.reduce method
+
+3. const/let
+
+4. conditionals
+
+5. logical operators (AND, OR, NOT)
+
+6. function composition. Remember f(g(x))
+
+7. ES6 template string (`Like this ${variable})
+
+8. ES6 arrow functions
+
+9. object
+
+10. for loop
+
+Evaluation
+
+I will evaluate your assignment based on the following criteria
+
+1. HTML - 5%
+
+2. JavaScript - 90%
+
+3. Github availability - 5%
